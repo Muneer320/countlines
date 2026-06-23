@@ -56,7 +56,7 @@ def collect_files(
             # Depth check
             if max_depth is not None:
                 current_depth = len(root_path.resolve().parts) - root_depth
-                if current_depth >= max_depth:
+                if current_depth > max_depth:
                     dirs.clear()
                     continue
 
