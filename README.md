@@ -1,5 +1,9 @@
 # codelines 🚀
 
+[![PyPI version](https://img.shields.io/pypi/v/codelines)](https://pypi.org/project/codelines/)
+[![Python 3.9+](https://img.shields.io/pypi/pyversions/codelines)](https://pypi.org/project/codelines/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 **A blazing-fast, parallel Lines of Code counter with a beautiful terminal UI.**
 
 Count lines of actual code in any project — respects `.gitignore` and `.ignore` files, uses multi-threaded parallel counting, and displays results in rich, interactive tables.
