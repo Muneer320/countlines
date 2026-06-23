@@ -1,0 +1,54 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "countlines"
+version = "0.1.0"
+description = "A blazing-fast, parallel Lines of Code counter with Rich terminal UI"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [
+    { name = "Muneer Alam", email = "muneer.alam320@gmail.com" }
+]
+keywords = ["loc", "lines-of-code", "code-metrics", "cli", "developer-tools"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Quality Assurance",
+    "Topic :: Utilities",
+]
+requires-python = ">=3.9"
+dependencies = [
+    "rich>=13.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/muneer320/countlines"
+Repository = "https://github.com/muneer320/countlines"
+Issues = "https://github.com/muneer320/countlines/issues"
+
+[project.scripts]
+countlines = "countlines.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/countlines"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
