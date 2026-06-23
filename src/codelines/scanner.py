@@ -10,8 +10,8 @@ from rich.live import Live
 from rich.progress import BarColumn, Progress, SpinnerColumn, TextColumn, TimeElapsedColumn
 from rich.table import Table
 
-from countlines.config import CODE_EXTENSIONS, LIVE_RECENT_MAX
-from countlines.ignore import should_ignore
+from codelines.config import CODE_EXTENSIONS, LIVE_RECENT_MAX
+from codelines.ignore import should_ignore
 
 console = Console()
 

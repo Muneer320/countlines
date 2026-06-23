@@ -7,33 +7,33 @@ from typing import Optional
 
 from rich.console import Console
 
-from countlines import __version__
-from countlines.config import DEFAULT_TOP_N, DEFAULT_WORKERS
-from countlines.ignore import load_ignore_patterns
-from countlines.scanner import collect_files
-from countlines.counter import count_lines
-from countlines.reporters import format_output
+from codelines import __version__
+from codelines.config import DEFAULT_TOP_N, DEFAULT_WORKERS
+from codelines.ignore import load_ignore_patterns
+from codelines.scanner import collect_files
+from codelines.counter import count_lines
+from codelines.reporters import format_output
 
 console = Console()
 
 
 def build_parser() -> argparse.ArgumentParser:
-    """Build the argument parser for the countlines CLI."""
+    """Build the argument parser for the codelines CLI."""
     parser = argparse.ArgumentParser(
-        prog="countlines",
+        prog="codelines",
         description="A blazing-fast, parallel Lines of Code counter with Rich terminal UI.",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
-  countlines .                        Count lines in current directory
-  countlines ~/projects               Count lines in ~/projects
-  countlines . --format json          Output as JSON
-  countlines . --include .py .js      Only count Python and JavaScript
-  countlines . --exclude .json .md    Skip JSON and Markdown files
-  countlines . --max-depth 3          Limit to 3 directory levels
-  countlines . --workers 8            Use 8 worker threads
-  countlines . --sort-by ext --top 10 Show top 10 extensions
-  countlines . --ignore-file .custom  Use .custom as additional ignore file
+  codelines .                        Count lines in current directory
+  codelines ~/projects               Count lines in ~/projects
+  codelines . --format json          Output as JSON
+  codelines . --include .py .js      Only count Python and JavaScript
+  codelines . --exclude .json .md    Skip JSON and Markdown files
+  codelines . --max-depth 3          Limit to 3 directory levels
+  codelines . --workers 8            Use 8 worker threads
+  codelines . --sort-by ext --top 10 Show top 10 extensions
+  codelines . --ignore-file .custom  Use .custom as additional ignore file
         """,
     )
 
@@ -113,14 +113,14 @@ Examples:
     parser.add_argument(
         "--version", "-V",
         action="version",
-        version=f"countlines {__version__}",
+        version=f"codelines {__version__}",
     )
 
     return parser
 
 
 def main(args: Optional[list] = None) -> int:
-    """Main entry point for the countlines CLI.
+    """Main entry point for the codelines CLI.
 
     Args:
         args: Command-line arguments (defaults to sys.argv[1:]).

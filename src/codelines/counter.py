@@ -11,7 +11,7 @@ from rich.live import Live
 from rich.progress import BarColumn, Progress, SpinnerColumn, TextColumn, TimeElapsedColumn
 from rich.table import Table
 
-from countlines.config import CHUNK_SIZE, DEFAULT_WORKERS, LIVE_RECENT_MAX
+from codelines.config import CHUNK_SIZE, DEFAULT_WORKERS, LIVE_RECENT_MAX
 
 console = Console()
 

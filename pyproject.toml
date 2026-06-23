@@ -3,7 +3,7 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "countlines"
+name = "codelines"
 version = "0.1.0"
 description = "A blazing-fast, parallel Lines of Code counter with Rich terminal UI"
 readme = "README.md"
@@ -39,15 +39,15 @@ dev = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/muneer320/countlines"
-Repository = "https://github.com/muneer320/countlines"
-Issues = "https://github.com/muneer320/countlines/issues"
+Homepage = "https://github.com/muneer320/codelines"
+Repository = "https://github.com/muneer320/codelines"
+Issues = "https://github.com/muneer320/codelines/issues"
 
 [project.scripts]
-countlines = "countlines.cli:main"
+codelines = "codelines.cli:main"
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/countlines"]
+packages = ["src/codelines"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

@@ -1,4 +1,4 @@
-"""Default configuration and constants for countlines."""
+"""Default configuration and constants for codelines."""
 
 import os
 from pathlib import Path

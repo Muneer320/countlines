@@ -1,4 +1,4 @@
-# countlines 🚀
+# codelines 🚀
 
 **A blazing-fast, parallel Lines of Code counter with a beautiful terminal UI.**
 
@@ -17,32 +17,32 @@ Count lines of actual code in any project — respects `.gitignore` and `.ignore
 ## Installation
 
 ```bash
-pip install countlines
+pip install codelines
 ```
 
 ## Quick Start
 
 ```bash
 # Count lines in current directory
-countlines .
+codelines .
 
 # Count lines in a specific directory
-countlines ~/my-project
+codelines ~/my-project
 
 # Output as JSON
-countlines . --format json
+codelines . --format json
 
 # Only count Python and JavaScript files
-countlines . --include .py .js
+codelines . --include .py .js
 
 # Limit to 3 levels deep
-countlines . --max-depth 3
+codelines . --max-depth 3
 ```
 
 ## Usage
 
 ```
-Usage: countlines [OPTIONS] [DIRECTORY]
+Usage: codelines [OPTIONS] [DIRECTORY]
 
 Options:
   --format [table|json|csv]   Output format (default: table)

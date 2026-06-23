@@ -1,4 +1,4 @@
-"""Tests for countlines package."""
+"""Tests for codelines package."""
 
 import json
 import tempfile
@@ -6,11 +6,11 @@ from pathlib import Path
 
 import pytest
 
-from countlines.ignore import load_ignore_patterns, should_ignore
-from countlines.counter import fast_count, count_lines
-from countlines.scanner import collect_files
-from countlines.reporters import format_output, top_n
-from countlines.cli import build_parser
+from codelines.ignore import load_ignore_patterns, should_ignore
+from codelines.counter import fast_count, count_lines
+from codelines.scanner import collect_files
+from codelines.reporters import format_output, top_n
+from codelines.cli import build_parser
 
 
 # ── ignore tests ──────────────────────────────────────────────────────
